@@ -11,7 +11,7 @@ buildscript {
 apply plugin: 'kotlin'
 apply plugin: 'application'
 
-mainClassName = 'App'
+mainClassName = 'AppKt'
 
 defaultTasks 'run'
 
@@ -24,5 +24,5 @@ dependencies {
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = "4.1"
+    gradleVersion = "4.6"
 }
