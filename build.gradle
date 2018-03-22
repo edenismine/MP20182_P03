@@ -1,17 +1,20 @@
 buildscript {
     ext.kotlin_version = '1.2.30'
     repositories {
+        jcenter()
         mavenCentral()
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.dokka:dokka-gradle-plugin:0.9.16"
     }
 }
 
 apply plugin: 'kotlin'
 apply plugin: 'application'
+apply plugin: 'org.jetbrains.dokka'
 
-mainClassName = 'AppKt'
+mainClassName = 'mx.unam.fciencias.mp.menus.AppKt'
 
 defaultTasks 'run'
 
@@ -21,6 +24,13 @@ repositories {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+}
+
+dokka {
+    outputFormat = 'html'
+    outputDirectory = "$buildDir/javadoc"
+    includeNonPublic = true
+    includes = ['packages.md', 'modules.md']
 }
 
 task wrapper(type: Wrapper) {

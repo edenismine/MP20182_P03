@@ -103,3 +103,7 @@ fabric.properties
 # Sonarlint plugin
 .idea/sonarlint
 #.idea/inspectionProfiles/
+
+### Pandoc ###
+pandoc.md
+metadata.yaml
