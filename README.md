@@ -1,4 +1,4 @@
-# Simple Mock-up chat app that uses the Template and Observer design patterns
+# Simple kotlin demo of the iterator design pattern
 
 ## Background
 
